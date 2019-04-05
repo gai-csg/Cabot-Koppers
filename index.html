@@ -5,79 +5,72 @@
 <body>
 	<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'> 
 		<a-assets>
-			<a-asset-item id="building1" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/building01.dae"></a-asset-item>
-			<a-asset-item id="building2" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/building02.dae"></a-asset-item>
-			<a-asset-item id="brownstone" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/Brownstones.dae"></a-asset-item>
-			<a-asset-item id="townhomes01" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/townhomes_01.dae"></a-asset-item>
-			<a-asset-item id="mu1_blake" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/mixed-use_02-blake.dae"></a-asset-item>
+			<a-asset-item id="comm_A" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/commercial_A.dae"></a-asset-item>
+			<a-asset-item id="tw_comm_A" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/townhome_commercial_A.dae"></a-asset-item>
+			<a-asset-item id="tw_comm_B" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/townhome_commercial_B.dae"></a-asset-item>
+			<a-asset-item id="tw_comm_C" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/townhome_commercial_C.dae"></a-asset-item>
+			<a-asset-item id="tw_A" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/townhomes_A.dae"></a-asset-item>
+			<a-asset-item id="tw_B" src="https://raw.githubusercontent.com/gai-csg/Cabot-Koppers/master/townhomes_B.dae"></a-asset-item>
 		</a-assets>	
-	<!-- handle hiro marker -->
-		<a-marker preset='hiro'>
-			<a-entity collada-model='#building1'></a-entity>
-		</a-marker>
-	<!-- handle kanji marker -->
-		<a-marker preset='kanji'>
-			<a-entity collada-model='#building2'></a-entity>
-		</a-marker>
-		
+	
 	<!-- handle barcode marker 0 -->
 		<a-marker type='barcode' value='0'>
-    			<a-entity collada-model='#mu1_blake'></a-entity>
+    			<a-entity collada-model='#comm_A'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 1 -->
 		<a-marker type='barcode' value='1'>
-    			<a-entity collada-model='#building1'></a-entity>
+    			<a-entity collada-model='#tw_comm_A'></a-entity>
 		</a-marker>
 
 	<!-- handle barcode marker 2 -->
 		<a-marker type='barcode' value='2'>
-    			<a-entity collada-model='#brownstone'></a-entity>
+    			<a-entity collada-model='#tw_comm_B'></a-entity>
 		</a-marker>
 	
 	<!-- handle barcode marker 3 -->
 		<a-marker type='barcode' value='3'>
-			<a-entity collada-model='#building2'></a-entity>
+			<a-entity collada-model='#tw_comm_C'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 4 -->
 		<a-marker type='barcode' value='4'>
-			<a-entity collada-model='#building2'></a-entity>
+			<a-entity collada-model='#tw_A'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 5 -->
 		<a-marker type='barcode' value='5'>
-			<a-entity collada-model='#building2'></a-entity>
+			<a-entity collada-model='#tw_B'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 6 -->
 		<a-marker type='barcode' value='6'>
-			<a-entity collada-model='#building3'></a-entity>
+			<a-entity collada-model='#comm_A'></a-entity>
 		</a-marker>
 
 	<!-- handle barcode marker 10 -->
 		<a-marker type='barcode' value='10'>
-    			<a-entity collada-model='#townhomes01'></a-entity>
+    			<a-entity collada-model='#tw_comm_A'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 15 -->
 		<a-marker type='barcode' value='15'>
-    			<a-entity collada-model='#mu1_blake'></a-entity>
-		</a-marker>
-		
-	<!-- handle barcode marker 25 -->
-		<a-marker type='barcode' value='25'>
-    			<a-entity collada-model='#building1'></a-entity>
+    			<a-entity collada-model='#tw_comm_B'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 20 -->
 		<a-marker type='barcode' value='20'>
-    			<a-entity collada-model='#mu1_blake'></a-entity>
+    			<a-entity collada-model='#tw_A'></a-entity>
+		</a-marker>
+		
+	<!-- handle barcode marker 25 -->
+		<a-marker type='barcode' value='25'>
+    			<a-entity collada-model='#tw_A'></a-entity>
 		</a-marker>
 		
 	<!-- handle barcode marker 50 -->
 		<a-marker type='barcode' value='50'>
-    			<a-entity collada-model='#brownstone'></a-entity>
+    			<a-entity collada-model='tw_comm_B'></a-entity>
 		</a-marker>
 	<a-entity camera></a-entity>
 	</a-scene>
